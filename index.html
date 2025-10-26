@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <!-- Font Awesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="title">📝 My To-Do List</h1>
+        <p class="description">Stay organized, one task at a time</p>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="panel">
+            <textarea placeholder="Enter your Task" id="inputText"></textarea>
+            <button onclick="addTask()" class="addTask">Add Task</button>
+        </div>
+
+
+        
+        <div class="editPopup" style="display: none;">
+            <textarea class="editArea"></textarea>
+            <div class="editActions">
+                <button class="confirmEdit">Confirm</button>
+                <button class="cancelEdit">Cancel</button>
+            </div>
+        </div>
+
+        <div class="taskList">
+            <div class="taskRow" style="display: none;">
+                <span class="taskText"></span>
+                <div class="taskButtons">
+                    <button class="completebtn"></button>
+                    <button class="editbtn"></button>
+                    <button class="deletebtn"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controlbtn">
+            <button class="viewbtn" onclick="displayTaskCard()">View</button>
+            <button class="deleteAll" onclick="reset()">Delete All</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-info">
+        <p>Author: M. Asghar Ali</p>
+        <p>&copy; 2025 My To-Do App. All rights reserved.</p>
+        <p>Contact: +92 XXX-XXXXXXX</p>
+    </div>
+    <div class="footer-social">
+        <a href="https://github.com/M-ASGHAR-786" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/m-asghar-ali-115517385/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
