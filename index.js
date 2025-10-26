@@ -2,7 +2,7 @@ const taskList = document.querySelector(".taskList");
 const taskRow = document.querySelector(".taskRow")
 
 let taskArray = [];
-onload = ()=>{
+window.onload = ()=>{
     const savedTasks = JSON.parse(localStorage.getItem("tasks"))
     taskArray = savedTasks || [];
     displayTaskList(taskArray);
